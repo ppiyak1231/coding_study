@@ -9,6 +9,8 @@
 
 ### 1차원 누적합
 
+<img width="1280" height="379" alt="img1 daumcdn" src="https://github.com/user-attachments/assets/319ad430-5e0f-4891-a31a-4ff8c0e20304" />
+
 ```python
 prefix_sum[i] = prefix_sum[i-1] + array[i]
 
@@ -27,6 +29,8 @@ def get_prefix_sum(data):
 
 ### 1차원 구간합
 
+<img width="1280" height="217" alt="img1 daumcdn" src="https://github.com/user-attachments/assets/0e33d73f-e019-488d-add2-2de45742f302" />
+
 ```python
 range(x, y) = prefix_sum[y] - prefix_sum[x-1]
 
@@ -38,6 +42,10 @@ result = p_sum[right + 1] - p_sum[left]
 ---
 
 ### 2차원 누적합
+
+<img width="501" height="475" alt="img1 daumcdn" src="https://github.com/user-attachments/assets/376a929c-7625-4796-8d0f-abc96ef892b5" />
+
+<img width="719" height="390" alt="img1 daumcdn" src="https://github.com/user-attachments/assets/ccf3e89f-e79e-4f0e-b0ca-3e64589e0240" />
 
 ```python
 prefix_sum[x, y] = arr[x-1, y-1] + prefix_sum[x-1, y] + prefix_sum[x, y-1] - prefix_sum[x-1, y-1]
@@ -57,6 +65,8 @@ def get_2d_prefix_sum(matrix):
 ```
 
 ### 2차원 구간합
+
+<img width="501" height="475" alt="img1 daumcdn" src="https://github.com/user-attachments/assets/403a1e90-93d7-4bc7-ac28-45d7c407ea27" />
 
 ```python
 range(x1,y1 ~ x1, y2) = prefix_sum[x2, y2] - prefix_sum[x1 -1, y2] - prefix_sum[x2, y1 -1] + prefix_sum[x1 -1, y1 -1]
@@ -81,4 +91,4 @@ prefix_sum = [0] + list(accumulate(data))
 print(prefix_sum) # [0, 10, 30, 60, 100, 150]
 ```
 
-### 문제
+이미지 출처: https://code-angie.tistory.com/22
