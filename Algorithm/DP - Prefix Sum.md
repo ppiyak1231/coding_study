@@ -56,12 +56,6 @@ def get_2d_prefix_sum(matrix):
     return S
 ```
 
-![img1.daumcdn.png](attachment:3c82ceba-8e06-4240-b580-2402b8f5d242:img1.daumcdn.png)
-
-![img1.daumcdn.png](attachment:d4241d47-ab09-4193-856c-f39255c62d24:img1.daumcdn.png)
-
-![img1.daumcdn.png](attachment:80b34015-a0a6-4e66-95d8-e6a881b7eb67:img1.daumcdn.png)
-
 ### 2차원 구간합
 
 ```python
@@ -72,7 +66,6 @@ range(x1,y1 ~ x1, y2) = prefix_sum[x2, y2] - prefix_sum[x1 -1, y2] - prefix_sum[
 result = S[x2+1][y2+1] - S[x1][y2+1] - S[x2+1][y1] + S[x1][y1]
 ```
 
-![img1.daumcdn.png](attachment:0af7a535-7cfb-4cb9-897a-a5d42ed34fd2:img1.daumcdn.png)
 
 ---
 
