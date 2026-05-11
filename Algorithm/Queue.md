@@ -60,3 +60,40 @@ class Queue:
     def display(self):
         return (self.items)
 ```
+
+### 관련 문제(서버 증설 횟수): https://school.programmers.co.kr/learn/courses/30/lessons/389479
+
+
+### 풀이
+
+```python
+from collections import deque
+
+def solution(players, m, k):
+    # 서버를 위한 큐
+    server_queue = deque([0]*k)
+    server_count = 0
+    
+    for player in players:
+        # 만료 서버 제거
+        server_queue.popleft()
+        
+        current_server = sum(server_queue)
+        
+        required_server = player // m
+        
+        # 필요한 서버가 현재 서버보다 많으면 증설
+        if required_server > current_server:
+            added_server = required_server - current_server
+            
+            server_count += added_server
+            server_queue.append(added_server)
+        
+        # 아니면 0 넣어 큐 길이는 유지
+        else:
+            server_queue.append(0)
+    
+    answer = server_count
+    return answer
+```
+
